@@ -3,7 +3,7 @@ name: Deploy MkDocs site
 on:
   push:
     branches:
-      - master  # Или main, если ваша основная ветка называется main
+      - master  # Или main, если у вас основная ветка называется main
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # Этот шаг клонирует репозиторий
+      uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -25,11 +25,10 @@ jobs:
         pip install mkdocs-material
 
     - name: Build the site
-      run: mkdocs build  # Собирает сайт в папке ./site
+      run: mkdocs build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub автоматически предоставляет этот токен
-        publish_dir: ./site  # Папка с собранным сайтом
-        publish_branch: gh-pages  # Указываем ветку, на которую будет выкладываться сайт
+        github_token: ${{ secrets.GH_TOKEN }}  # Секрет GitHub
+        publish_dir: ./site
