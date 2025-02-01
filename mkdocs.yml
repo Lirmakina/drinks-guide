@@ -1,3 +1,9 @@
 site_name: Drinks Guide
 theme:
   name: material
+
+nav:
+  - Home: index.md
+  - Tea: tea.md
+  - Coffee: coffee.md
+  - Cocoa: cocoa.md
