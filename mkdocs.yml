@@ -3,8 +3,8 @@ theme:
   name: material
 
 nav:
-  - Home: index.md
-  - Tea: tea.md
-  - Coffee: coffee.md
-  - Cocoa: cocoa.md
-  - Glintvein: glintvein.md
+  - Рецепты напитков:
+      - Чай: tea.md
+      - Кофе: coffee.md
+      - Какао: cocoa.md
+      - Глинтвейн: glintvein.md
