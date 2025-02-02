@@ -1,6 +1,8 @@
 site_name: Drinks Guide
 theme:
   name: material
+  features:
+    - navigation.expand
 
 nav:
   - Рецепты напитков:
